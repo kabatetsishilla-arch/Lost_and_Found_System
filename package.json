@@ -1,0 +1,14 @@
+{
+  "name": "ucu-campus-lost-and-found",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Responsive UCU campus lost and found application",
+  "workspaces": ["server", "client"],
+  "scripts": {
+    "dev": "concurrently -k -n api,web -c blue,green \"npm:dev --workspace=server\" \"npm:dev --workspace=client\"",
+    "start": "npm run start --workspace=server",
+    "build": "npm run build --workspace=client",
+    "db:setup": "npm run db:setup --workspace=server"
+  },
+  "devDependencies": { "concurrently": "^9.1.2" }
+}
