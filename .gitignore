@@ -2,6 +2,7 @@ node_modules/
 client/dist/
 server/.env
 .env
+.local-mysql/
 *.log
 .DS_Store
 coverage/
